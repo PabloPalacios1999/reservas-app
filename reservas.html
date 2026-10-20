@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserva de Cancha Sintética</title>
+    <!-- CSS de Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Estilos propios opcionales -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-light">
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html"
+          >⚽ Cancha Sintética</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservas.html">Hacer Reserva</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="consultas.html"
+                >Consultar Disponibilidad</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-4">
+      <div class="row g-4">
+        <!-- Columna del Formulario -->
+        <div class="col-md-5">
+          <div class="card shadow-sm">
+            <div class="card-header bg-white">
+              <h5 class="card-title mb-0">Nueva Reserva</h5>
+            </div>
+            <div class="card-body">
+              <form id="reservaForm">
+                <div class="mb-3">
+                  <label for="profesor" class="form-label"
+                    >Nombre del Profesor</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="profesor"
+                    required
+                    placeholder="Ej. Carlos Mendoza"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="materia" class="form-label"
+                    >Asignatura / Curso</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="materia"
+                    required
+                    placeholder="Ej. Ed. Física - 10°A"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="fecha" class="form-label">Fecha</label>
+                  <input type="date" class="form-control" id="fecha" required />
+                </div>
+                <div class="row">
+                  <div class="col-6 mb-3">
+                    <label for="horaInicio" class="form-label"
+                      >Hora Inicio</label
+                    >
+                    <input
+                      type="time"
+                      class="form-control"
+                      id="horaInicio"
+                      required
+                    />
+                  </div>
+                  <div class="col-6 mb-3">
+                    <label for="horaFin" class="form-label">Hora Fin</label>
+                    <input
+                      type="time"
+                      class="form-control"
+                      id="horaFin"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="notas" class="form-label"
+                    >Observaciones (opcional)</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="notas"
+                    rows="2"
+                    placeholder="Ej. Torneo interclases"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-success w-100">
+                  Confirmar Reserva
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna de la Lista / Tabla de Reservas -->
+        <div class="col-md-7">
+          <div class="card shadow-sm">
+            <div
+              class="card-header bg-white d-flex justify-content-between align-items-center"
+            >
+              <h5 class="card-title mb-0">Reservas Programadas</h5>
+              <input
+                type="date"
+                id="filtroFecha"
+                class="form-control form-control-sm w-auto"
+              />
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Profesor</th>
+                      <th>Curso/Materia</th>
+                      <th>Horario</th>
+                      <th>Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tablaReservas">
+                    <!-- Las reservas cargadas con JS aparecerán aquí -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS de Bootstrap y Script de la App -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

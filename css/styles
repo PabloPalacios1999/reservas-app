@@ -1,0 +1,10 @@
+.carrusel-img {
+  height: 100px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .carrusel-img {
+    height: 250px;
+  }
+}

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cancha Sintética - Colegio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles" />
+  </head>
+  <body class="bg-light">
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html"
+          >⚽ Cancha Sintética</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservas.html">Hacer Reserva</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="consultas.html"
+                >Consultar Disponibilidad</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Carrusel -->
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img
+            src="assets/cancha1.jpg"
+            class="d-block w-100"
+            alt="..."
+            style="height: 500px"
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img
+            src="assets/cancha2.jpg"
+            class="d-block w-100"
+            alt="..."
+            style="height: 500px"
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img
+            src="assets/cancha3.jpg"
+            class="d-block w-100"
+            alt="..."
+            style="height: 500px"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Sección de Información y Botones de Acción -->
+    <div class="container my-4">
+      <div class="row text-center mb-4">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <div class="fs-1 text-success mb-2">📅</div>
+              <h5 class="card-title">Reserva de Horarios</h5>
+              <p class="card-text text-muted">
+                Aparta la cancha fácilmente seleccionando la fecha, la hora y el
+                curso a cargo.
+              </p>
+              <a href="reservas.html" class="btn btn-outline-success"
+                >Reservar Ahora</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <div class="fs-1 text-success mb-2">🔍</div>
+              <h5 class="card-title">Consulta e Historial</h5>
+              <p class="card-text text-muted">
+                Filtra las reservas por profesor, fecha o asignatura para
+                verificar disponibilidad.
+              </p>
+              <a href="consultas.html" class="btn btn-outline-success"
+                >Ver Consultas</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <div class="fs-1 text-success mb-2">📋</div>
+              <h5 class="card-title">Reglamento de Uso</h5>
+              <p class="card-text text-muted">
+                Uso obligatorio de calzado adecuado (tenis de guayo/tenis
+                deportivos). Mantener la limpieza del área.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
