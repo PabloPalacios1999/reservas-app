@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      if ((email === '123' && password === '123') || (email === 'admin@correo.com' && password === '123456')) {
+      if ((email === '1234' && password === '1234') || (email === 'admin@gmail.com' && password === '1234')) {
         if (alertBox) {
           alertBox.className = 'alert alert-success mt-3 d-block';
           alertBox.textContent = '¡Inicio de sesión exitoso! Redirigiendo...';
