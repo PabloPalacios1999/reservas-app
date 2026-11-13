@@ -8,3 +8,43 @@
     height: 250px;
   }
 }
+
+.carrusel-personalizado img {
+    height: 400px; /* Ajusta esta altura según qué tan alto lo quieras */
+    object-fit: cover; /* Recorta la imagen de forma proporcional sin aplastarla */
+    border-radius: 15px; /* Bordes redondeados para que se vea más moderno */
+  }
+
+  .footer-klo {
+    background-color: #155d33; /* Un verde un poco más oscuro que tu barra superior para dar profundidad */
+    color: #ffffff;
+  }
+  .footer-klo a {
+    color: #d1e7dd;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .footer-klo a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+  }
+  .social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+  }
+
+  .mini-carrusel-img {
+    height: 220px; /* Altura compacta ideal para este bloque */
+    object-fit: cover; /* Recorta sin deformar la foto */
+  }

@@ -16,8 +16,13 @@
     <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html"
-          >⚽ Cancha Sintética</a
+        <a class="navbar-brand fw-bold" href="main.html"
+          ><img
+            src="assets/logo-png.png"
+            alt=""
+            style="width: 50px; height: 50px"
+          />
+          KLO</a
         >
         <button
           class="navbar-toggler"
@@ -30,7 +35,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Inicio</a>
+              <a class="nav-link active" href="main.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="reservas.html">Hacer Reserva</a>
@@ -55,6 +60,51 @@
             </div>
             <div class="card-body">
               <form id="reservaForm">
+                <!-- BLOQUE NUEVO: Institución Educativa -->
+                <div class="mb-3">
+                  <label class="form-label">Institución Educativa</label>
+
+                  <!-- Caso A: Cuadro por defecto si ya viene seleccionada desde main.html -->
+                  <div id="bloqueInstitucionFija" class="d-none">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control bg-light fw-semibold text-success"
+                        id="institucionFijaInput"
+                        readonly
+                      />
+                      <button
+                        type="button"
+                        class="btn btn-outline-secondary btn-sm"
+                        id="btnCambiarInstitucionForm"
+                      >
+                        Cambiar
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Caso B: Lista desplegable habilitada si NO se seleccionó antes -->
+                  <div id="bloqueInstitucionSelect">
+                    <select class="form-select" id="institucionSelect" required>
+                      <option value="">-- Selecciona una institución --</option>
+                      <option value="Independencia">Independencia</option>
+                      <option value="Montechino">Montechino</option>
+                      <option value="Ineterpo">Ineterpo</option>
+                      <option value="Salesiano">Salesiano</option>
+                      <option value="Joga bonito">Joga bonito</option>
+                      <option value="San Francisco">San Francisco</option>
+                      <option value="Bombonera">Bombonera</option>
+                      <option value="Cristal">Cristal</option>
+                      <option value="Bolivar">Bolivar</option>
+                      <option value="Cancha de piedra 1">
+                        Salesiano - cancha de piedra 1
+                      </option>
+                      <option value="Cancha de piedra 2">
+                        Salesiano - cancha de piedra 2
+                      </option>
+                    </select>
+                  </div>
+                </div>
                 <div class="mb-3">
                   <label for="profesor" class="form-label"
                     >Nombre del Profesor</label
@@ -142,6 +192,7 @@
                 <table class="table table-hover align-middle">
                   <thead class="table-light">
                     <tr>
+                      <th>Institución</th>
                       <th>Profesor</th>
                       <th>Curso/Materia</th>
                       <th>Horario</th>

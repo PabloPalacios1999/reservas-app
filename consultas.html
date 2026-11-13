@@ -11,10 +11,16 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body class="bg-light">
+    <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html"
-          >⚽ Cancha Sintética</a
+        <a class="navbar-brand fw-bold" href="main.html"
+          ><img
+            src="assets/logo-png.png"
+            alt=""
+            style="width: 50px; height: 50px"
+          />
+          KLO</a
         >
         <button
           class="navbar-toggler"
@@ -27,13 +33,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Inicio</a>
+              <a class="nav-link active" href="main.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="reservas.html">Hacer Reserva</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="consultas.html"
+              <a class="nav-link" href="consultas.html"
                 >Consultar Disponibilidad</a
               >
             </li>
@@ -49,8 +55,31 @@
       <div class="card shadow-sm mb-4">
         <div class="card-body bg-white rounded">
           <form id="filtroForm" class="row g-3">
-            <div class="col-md-4">
-              <label for="filtroProfesor" class="form-label font-weight-bold"
+            <div class="col-md-3">
+              <label for="filtroInstitucion" class="form-label fw-semibold"
+                >Institución</label
+              >
+              <select class="form-select" id="filtroInstitucion">
+                <option value="">Todas las instituciones</option>
+                <option value="Independencia">Independencia</option>
+                <option value="Montechino">Montechino</option>
+                <option value="Ineterpo">Ineterpo</option>
+                <option value="Salesiano">Salesiano</option>
+                <option value="Joga bonito">Joga bonito</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="Bombonera">Bombonera</option>
+                <option value="Cristal">Cristal</option>
+                <option value="Bolivar">Bolivar</option>
+                <option value="Cancha de piedra 1">
+                  Salesiano - cancha de piedra 1
+                </option>
+                <option value="Cancha de piedra 2">
+                  Salesiano - cancha de piedra 2
+                </option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="filtroProfesor" class="form-label fw-semibold"
                 >Buscar por Profesor</label
               >
               <input
@@ -60,13 +89,13 @@
                 placeholder="Nombre del docente..."
               />
             </div>
-            <div class="col-md-4">
-              <label for="filtroFecha" class="form-label font-weight-bold"
+            <div class="col-md-3">
+              <label for="filtroFecha" class="form-label fw-semibold"
                 >Filtrar por Fecha</label
               >
               <input type="date" class="form-control" id="filtroFecha" />
             </div>
-            <div class="col-md-4 d-flex align-items-end gap-2">
+            <div class="col-md-3 d-flex align-items-end">
               <button
                 type="button"
                 id="btnLimpiarFiltros"
@@ -79,7 +108,7 @@
         </div>
       </div>
 
-      <!-- Resultados -->
+      <!-- Tabla de Resultados -->
       <div class="card shadow-sm">
         <div
           class="card-header bg-white d-flex justify-content-between align-items-center"
@@ -94,6 +123,7 @@
             <table class="table table-striped table-hover align-middle mb-0">
               <thead class="table-light">
                 <tr>
+                  <th>Institución</th>
                   <th>Profesor</th>
                   <th>Curso / Materia</th>
                   <th>Fecha</th>
